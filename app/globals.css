@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+:root { --faro-ink: #101a2b; --faro-night: #17253b; --faro-paper: #f5f2eb; --faro-gold: #caa15b; --faro-muted: #7b8492; --faro-line: #d9d5cc; color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--faro-paper); }
+body { margin: 0; background: var(--faro-paper); color: var(--faro-ink); font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+.faro-shell { max-width: 1440px; margin: 0 auto; overflow: hidden; }
+.faro-header { align-items: center; display: flex; justify-content: space-between; padding: 1.25rem 1.25rem; }
+.faro-mark { align-items: center; display: inline-flex; gap: .55rem; font-size: 1rem; letter-spacing: -.03em; }
+.faro-mark b { font-weight: 400; color: var(--faro-gold); }
+.faro-mark-star { color: var(--faro-gold); font-size: 1.2rem; }
+.faro-nav { align-items: center; display: flex; gap: 1rem; font-size: .75rem; color: var(--faro-muted); }
+.faro-nav a:not(.faro-nav-cta) { display: none; }
+.faro-nav-cta { border: 1px solid var(--faro-ink); border-radius: 999px; color: var(--faro-ink); padding: .6rem .9rem; }
+.faro-hero { background: var(--faro-night); color: var(--faro-paper); display: grid; gap: 3rem; min-height: 570px; padding: 5.5rem 1.25rem 4rem; position: relative; }
+.faro-hero:after { background: var(--faro-gold); content: ''; height: 1px; left: 1.25rem; opacity: .55; position: absolute; right: 1.25rem; top: 2rem; }
+.faro-hero-copy { max-width: 680px; }
+.faro-eyebrow, .faro-section-label, .faro-note-label { color: var(--faro-gold); font-size: .68rem; letter-spacing: .17em; margin: 0 0 1.25rem; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(2.8rem, 10vw, 6.7rem); font-weight: 400; letter-spacing: -.075em; line-height: .97; margin-bottom: 1.5rem; max-width: 900px; }
+h2 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 400; letter-spacing: -.065em; line-height: 1.02; margin-bottom: 1.25rem; }
+h3 { font-size: 1rem; font-weight: 600; }
+p { font-size: 1rem; line-height: 1.7; }
+.faro-lead { color: #c2c9d2; font-size: 1.05rem; max-width: 520px; }
+.faro-hero-actions { align-items: center; display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 2rem; }
+.faro-primary-link { background: var(--faro-gold); color: var(--faro-ink); font-size: .85rem; padding: .9rem 1.1rem; }
+.faro-text-link { border-bottom: 1px solid #8190a3; color: #d9dfe6; font-size: .85rem; padding-bottom: .25rem; }
+.faro-hero-note { align-self: end; border-left: 1px solid var(--faro-gold); max-width: 260px; padding-left: 1rem; }
+.faro-hero-note p { color: #c2c9d2; font-size: .88rem; line-height: 1.55; }
+.faro-note-line { background: var(--faro-gold); display: block; height: 3rem; margin-top: 2rem; width: 1px; }
+.faro-intro, .faro-grid-section, .faro-play, .faro-faq { display: grid; gap: 2rem; padding: 5rem 1.25rem; }
+.faro-section-label { color: var(--faro-muted); margin: 0; }
+.faro-intro-text, .faro-grid-copy, .faro-play-content, .faro-faq > div:last-child { max-width: 720px; }
+.faro-intro-text p, .faro-grid-copy p, .faro-play-content > p, .faro-faq details { color: #3c4655; }
+.faro-intro-text strong, .faro-grid-copy strong, .faro-play-content strong { color: var(--faro-ink); font-weight: 600; }
+.faro-art { margin: 0; }
+.faro-art img { display: block; height: auto; width: 100%; }
+.faro-art figcaption { color: var(--faro-muted); font-size: .7rem; letter-spacing: .08em; padding: .7rem 1.25rem; text-transform: uppercase; }
+.faro-grid-section { background: #e8e5dd; }
+.faro-checklist { border-top: 1px solid var(--faro-ink); padding-top: 1rem; }
+.faro-checklist ol { list-style: none; margin: 0; padding: 0; }
+.faro-checklist li { border-bottom: 1px solid #c9c6bd; display: flex; gap: .8rem; padding: .85rem 0; }
+.faro-checklist li span, .faro-principles article > span { color: var(--faro-gold); font-family: monospace; font-size: .72rem; }
+.faro-play { background: var(--faro-night); color: var(--faro-paper); }
+.faro-play .faro-section-label { color: var(--faro-gold); }
+.faro-play-content > p { color: #c2c9d2; }
+.faro-principles { border-top: 1px solid #506078; display: grid; gap: 1.5rem; margin-top: 2.5rem; padding-top: 1.5rem; }
+.faro-principles article p { color: #aeb8c6; font-size: .88rem; line-height: 1.5; }
+.faro-faq { background: #e8e5dd; }
+.faro-faq details { border-top: 1px solid #c9c6bd; padding: 1rem 0; }
+.faro-faq summary { cursor: pointer; font-weight: 600; list-style-position: outside; }
+.faro-faq details p { font-size: .9rem; margin: .9rem 0 .2rem; }
+.faro-footer { background: var(--faro-ink); color: var(--faro-paper); display: grid; gap: 2rem; padding: 3rem 1.25rem; }
+.faro-footer p { color: #9ca7b5; font-size: .8rem; margin: .8rem 0 0; }
+.faro-tags { display: flex; flex-wrap: wrap; gap: .45rem .8rem; }
+.faro-tags a { color: #caa15b; font-size: .72rem; }
+.faro-legal { border-top: 1px solid #354358; padding-top: 1.25rem; }
+@media (min-width: 700px) { .faro-header { padding: 1.5rem 4rem; } .faro-nav { gap: 2rem; } .faro-nav a:not(.faro-nav-cta) { display: block; } .faro-hero, .faro-intro, .faro-grid-section, .faro-play, .faro-faq { padding-left: 8vw; padding-right: 8vw; } .faro-hero { min-height: 650px; padding-top: 8rem; } .faro-hero:after { left: 8vw; right: 8vw; } .faro-intro, .faro-grid-section, .faro-play, .faro-faq { grid-template-columns: minmax(100px, 1fr) minmax(0, 3fr); } .faro-checklist { align-self: end; } .faro-principles { grid-template-columns: repeat(3, 1fr); gap: 2rem; } .faro-footer { grid-template-columns: 1fr 2fr; padding: 4rem 8vw; } .faro-legal { grid-column: 1 / -1; } .faro-art figcaption { padding-left: 8vw; } }
+@media (min-width: 1100px) { .faro-hero { grid-template-columns: 3fr 1fr; padding-right: 12vw; } .faro-hero-note { margin-bottom: 2rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
